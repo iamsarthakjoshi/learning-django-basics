@@ -83,8 +83,11 @@ INSTALLED_APPS = [
 However, Django uses some different names for these. The four pieces to understand are `URL patterns`, `views`, `models`, and `templates`.
 
 `URL patterns`: When a Django application receives a web request, it uses the URL patterns to decide which view to pass the request to for handling. In our project, the URL patterns will be defined in `wisdompets/urls.py`.
+
 `views`: Views provide the logic or control flow portion of the project. A view is a Python callable, such as a function that takes an HTTP request as an argument and returns an HTTP response for the web server to return. Our views will be defined at `adoptions/views.py`.
+
 `models`: To perform queries against the database, each `view` can leverage Django `models` as needed. We will define our models for the adoptions app in `adoptions/models.py`. **A Django model is a class with attributes that define the schema or underlying structure of a database table.** These classes will provide built-in methods for making queries on the associated tables.
+
 `templates`: Each view we define can also leverage templates, which help with the **presentation layer** of what the HTML response will look like. Each template is a separate file that consists of HTML along with some extra template syntax for variables, loops, and other control flow. Our template files will be placed in a folder that we'll create called `templates`, and it will be inside of the `adoptions folder`.
 
 ## More on Models
@@ -101,8 +104,11 @@ As a rough analogy, we can conceptualize models as spreadsheets. Each model is a
 Refer to this doc: https://docs.djangoproject.com/en/3.1/ref/models/fields/
 
 `Field options`: https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-options
+
 `Field types`: https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-types
+
 `Relationship fields`: https://docs.djangoproject.com/en/3.1/ref/models/fields/#module-django.db.models.fields.related
+
 `Field API reference`: https://docs.djangoproject.com/en/3.1/ref/models/fields/#field-api-reference
 
 > Please note that the documentation version might be different by the time you read this. If that happens, visit https://docs.djangoproject.com and check out the Documentation link.
@@ -756,6 +762,9 @@ Now to _implement static assets in a template_, we'll use a static template tag.
          />
       </a>
    </div>
+...
+   <img src="{% static 'header.jpg' %}" <!--👈 -->
+      alt="We Love Pets" />
 ...
 
 ```
