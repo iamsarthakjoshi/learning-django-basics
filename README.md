@@ -69,12 +69,19 @@ INSTALLED_APPS = [
 ## Pieces of an App
 
 `apps.py`: file controls settings specific to this app.
+
 `models.py`: file provides the data layer, which Django uses to construct our database schema and queries.
+
 `admin.py`: file defines an administrative interface for the app that will allow us to see and edit the data related to this app.
+
 `urls.py`: file can be used for URL routing specific to this app.
+
 `views.py`: file defines the logic and control flow for handling requests and defines the HTTP responses that are returned.
+
 `tests.py`: file can be used for writing unit tests for the functionality of this app.
+
 `migrations`: folder holds files which Django uses to migrate the database as we create and change our database schema over time.
+
 
 # Django Models and the Admin
 
